@@ -34,10 +34,11 @@ To deploy it to AWS
 ```
 To run it on local
 ```$xslt
-mvn clean instll
-rm docker/carousell-code-challenge-0.0.1-SNAPSHOT.war
-cp target/carousell-code-challenge-0.0.1-SNAPSHOT.war docker/carousell-code-challenge-0.0.1-SNAPSHOT.war
+mvn clean install
+rm docker/carousell-code-challenge-0.1.0-SNAPSHOT.war
+cp target/carousell-code-challenge-0.1.0-SNAPSHOT.war docker/carousell-code-challenge-0.1.0-SNAPSHOT.war
 docker build -t carousell-code-challenge ./docker/
 docker run -p 8080:8080 -it carousell-code-challenge:latest
+// Open in browser: http://localhost:8080/carousell-code-challenge
 ```
-Link to application http://ec2-54-255-180-156.ap-southeast-1.compute.amazonaws.com:8080/carousell-code-challenge/#/?_k=4n68tr
+Link to application http://ec2-54-255-180-156.ap-southeast-1.compute.amazonaws.com:8080/carousell-code-challenge/
